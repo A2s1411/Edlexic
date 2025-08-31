@@ -1,6 +1,8 @@
 from tkinter import *
 from tkvideo import tkvideo
 from fruits import fruits
+from planets import planets
+from practice import practice_main
 
 def edwin():
 
@@ -10,7 +12,7 @@ def edwin():
 
     imglbl1=Label(root1)
     imglbl1.place(x=0, y=0, relwidth=1, relheight=1)
-    player1 = tkvideo("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/mainwindowbackvid1.mp4", imglbl1,loop = 1, size = (360,640))
+    player1 = tkvideo("mainwindowbackvid1.mp4", imglbl1,loop = 1, size = (360,640))
     player1.play()
 
     def themes():
@@ -21,7 +23,7 @@ def edwin():
         fb=Button(frame3,text="FRUITS",bg='#712b75',fg='#ffffff',font=("Helvetica",12,'bold'),command=fruits)
         fb.grid(row=0,column=0,padx=10,pady=5,ipadx=40,ipady=30)
 
-        fb=Button(frame3,text="PLANETS",bg='#712b75',fg='#ffffff',font=("Helvetica",12,'bold'))
+        fb=Button(frame3,text="PLANETS",bg='#712b75',fg='#ffffff',font=("Helvetica",12,'bold'),command=planets)
         fb.grid(row=0,column=1,padx=10,pady=5,ipadx=33,ipady=30)
 
         fb=Button(frame3,text="ANIMALS",bg='#712b75',fg='#ffffff',font=("Helvetica",12,'bold'))
@@ -36,7 +38,7 @@ def edwin():
     fb=Button(frame2,text="LEARN",bg='#9e59ff',fg='#ffffff',font=("Helvetica",12,'bold'),command=themes)
     fb.grid(row=0,column=0,padx=10,pady=5,ipadx=40,ipady=30)
 
-    fb=Button(frame2,text="PRACTICE",bg='#9e59ff',fg='#ffffff',font=("Helvetica",12,'bold'))
+    fb=Button(frame2,text="PRACTICE",bg='#9e59ff',fg='#ffffff',font=("Helvetica",12,'bold'),command=practice_main)
     fb.grid(row=0,column=1,padx=10,pady=5,ipadx=32,ipady=30)
 
     fb=Button(frame2,text="TEST",bg='#9e59ff',fg='#ffffff',font=("Helvetica",12,'bold'))

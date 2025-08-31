@@ -1,29 +1,42 @@
 from tkinter import *
 from tts import speak
 from PIL import Image,ImageTk
+import os
 
 def fruits():
     root2=Toplevel()
     root2.configure(bg='#e2cffc')
     root2.title("FRUITS")
 
-    myimg1=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/apple.jpg")
-    myimg2=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/bananas.jpg")
-    myimg3=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/guava.jpg")
-    myimg4=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/orange.jpg")
-    myimg5=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/kiwi.jpg")
-    myimg6=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/strawberries.jpg")
-    myimg7=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/pineapple.jpg")
-    myimg8=Image.open("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/fruitimages/grape.jpg")
+    base_path = os.path.dirname(__file__)
+    fruit_images = [
+        os.path.join(base_path, "fruitimages", "apple.jpg"),
+        os.path.join(base_path, "fruitimages", "bananas.jpg"),
+        os.path.join(base_path, "fruitimages", "guava.jpg"),
+        os.path.join(base_path, "fruitimages", "orange.jpg"),
+        os.path.join(base_path, "fruitimages", "kiwi.jpg"),
+        os.path.join(base_path, "fruitimages", "strawberries.jpg"),
+        os.path.join(base_path, "fruitimages", "pineapple.jpg"),
+        os.path.join(base_path, "fruitimages", "grape.jpg")
+    ]
 
-    resize1=myimg1.resize((150,100),Image.ANTIALIAS)
-    resize2=myimg2.resize((150,100),Image.ANTIALIAS)
-    resize3=myimg3.resize((150,100),Image.ANTIALIAS)
-    resize4=myimg4.resize((150,100),Image.ANTIALIAS)
-    resize5=myimg5.resize((150,100),Image.ANTIALIAS)
-    resize6=myimg6.resize((150,100),Image.ANTIALIAS)
-    resize7=myimg7.resize((150,100),Image.ANTIALIAS)
-    resize8=myimg8.resize((150,100),Image.ANTIALIAS)
+    myimg1=Image.open(fruit_images[0])
+    myimg2=Image.open(fruit_images[1])
+    myimg3=Image.open(fruit_images[2])
+    myimg4=Image.open(fruit_images[3])
+    myimg5=Image.open(fruit_images[4])
+    myimg6=Image.open(fruit_images[5])
+    myimg7=Image.open(fruit_images[6])
+    myimg8=Image.open(fruit_images[7])
+
+    resize1=myimg1.resize((150,100),Image.LANCZOS)
+    resize2=myimg2.resize((150,100),Image.LANCZOS)
+    resize3=myimg3.resize((150,100),Image.LANCZOS)
+    resize4=myimg4.resize((150,100),Image.LANCZOS)
+    resize5=myimg5.resize((150,100),Image.LANCZOS)
+    resize6=myimg6.resize((150,100),Image.LANCZOS)
+    resize7=myimg7.resize((150,100),Image.LANCZOS)
+    resize8=myimg8.resize((150,100),Image.LANCZOS)
 
     newimg1=ImageTk.PhotoImage(resize1)
     newimg2=ImageTk.PhotoImage(resize2)

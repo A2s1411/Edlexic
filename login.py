@@ -3,13 +3,14 @@ from tkvideo import tkvideo
 from emailsender import sendmsg
 from emailpasssender import sendpass,p
 from ed import edwin
+import os
 
 root=Tk()
 root.geometry("360x640")
 root.title("LOGIN")
 imglbl=Label(root)
 imglbl.place(x=0, y=0, relwidth=1, relheight=1)
-player = tkvideo("C:/Users/DELL/Documents/VS/HACKATHONS/EDLEXIC/backvid.mp4", imglbl,loop = 1, size = (360,640))
+player = tkvideo(os.path.join(os.path.dirname(__file__), "backvid.mp4"), imglbl,loop = 1, size = (360,640))
 player.play()
 
 def signin():

@@ -1,0 +1,6 @@
+Pillow>=10.0.0
+tkvideo==0.1
+gTTS==2.4.0
+playsound==1.2.2
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.13
